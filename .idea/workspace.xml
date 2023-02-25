@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94a5c818-3e88-4629-91a3-f31df4e785f0" name="Changes" comment="Assignment 2 With Documentation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="94a5c818-3e88-4629-91a3-f31df4e785f0" name="Changes" comment="Assignment 2 With Documentation bug1 fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +63,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,6 +90,7 @@
       <workItem from="1676790576449" duration="20000" />
       <workItem from="1676790624668" duration="2250000" />
       <workItem from="1677259214405" duration="9789000" />
+      <workItem from="1677287769079" duration="126000" />
     </task>
     <task id="LOCAL-00001" summary="ICE3 completed">
       <created>1676688087263</created>
@@ -142,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677268681288</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Assignment 2 With Documentation bug1 fixed">
+      <created>1677287822185</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677287822185</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +251,7 @@
     <MESSAGE value="Assignment 2 - No Docmentation but Fuctional" />
     <MESSAGE value="Assignment 2 - No Docmentation but Fuctional v2" />
     <MESSAGE value="Assignment 2 With Documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 2 With Documentation" />
+    <MESSAGE value="Assignment 2 With Documentation bug1 fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 2 With Documentation bug1 fixed" />
   </component>
 </project>
