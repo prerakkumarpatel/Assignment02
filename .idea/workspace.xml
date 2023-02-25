@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="94a5c818-3e88-4629-91a3-f31df4e785f0" name="Changes" comment="Assignment 2 With Documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,7 @@
       <workItem from="1676689739193" duration="2385000" />
       <workItem from="1676790576449" duration="20000" />
       <workItem from="1676790624668" duration="2250000" />
-      <workItem from="1677259214405" duration="8832000" />
+      <workItem from="1677259214405" duration="9789000" />
     </task>
     <task id="LOCAL-00001" summary="ICE3 completed">
       <created>1676688087263</created>
