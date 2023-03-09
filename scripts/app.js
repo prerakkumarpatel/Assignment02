@@ -10,100 +10,44 @@
 (function () {
     // Display home page
     function DisplayHomePage() {
-        $("#AboutUsBtn").on("click", () => location.href = "about.html");
+        console.log("home page called");
+        $("#AboutUsBtn").on("click", () => location.href = "about"
+        );
         $("body").append(`<article class="container"><p id="ArticleParagraph" class="mt-3">This is Article paragraph</p> </article>`)
         $("main").append(`<p class="mt-3" id="MainParagraph">This is jquery generated paragraph</p> `);
 
     }
 
-    // Ajax Request
-    function AjaxRequest(method,url,callback){
-
-        let XHR =  new XMLHttpRequest();
-        XHR.addEventListener(("readystatechange"),()=>{
-            if(XHR.readyState === 4 && XHR.status ===200)
-            {
-                if(typeof callback === "function"){
-                    callback(XHR.responseText);
-
-                }else {
-                    console.log("Error: callback not a function");
-                }
-            }
-        });
-        XHR.open(method,url);
-        XHR.send();
-        console.log("Ajax is called");
-
-    }
 
     // Loading header for ajax
-    function LoadHeader(html_data){
-        $("header").html(html_data);
-        $(`li>a:contains(${document.title})`).addClass("active");
-        CheckLogin();
-      console.log("load header called");
+    function LoadHeader(){
+        $.get("./views/components/header.html",function (html_data){
+
+            $("header").html(html_data);
+            $(`li>a:contains(${document.title})`).addClass("active");
+            CheckLogin();
+            console.log("load header called");
+        });
+
 
     }
 
     // Displaying product page
-    function DisplayProductPage() {
-        console.log("Display Product page called");
-        CreateProjectPage();
+    function DisplayProjectPage() {
+        console.log("Display project page called");
+
     }
 
     // Displaying service page
     function DisplayServicePage() {
         console.log("Display Service page called");
-        CreateServicesPage();
     }
 
-    // Creating service page
-    function CreateServicesPage() {
-        let container = document.createElement("div");
-        container.classList.add("container", "justify-content-center", "ms-auto");
-
-
-        let ServicesDiv = document.createElement("div");
-        ServicesDiv.id = "Service";
-        ServicesDiv.classList.add("justify-content-center", "d-flex");
-
-        let Services = [
-            {
-                description: "We provide you a unique website design that is ideal for your personal or company website.",
-                image: "./images/services_web_design.jpg"
-            },
-            {
-                description: "we provide end-to-end organization, conceptualization, design, optimization, and maintenance of your mobile app project.",
-                image: "./images/services_app_development.png"
-            },
-            {
-                description: "We are capable of handling the design, creation, and release of a video game.",
-                image: "./images/services_game_development.jpeg"
-            }
-        ];
-
-        Services.forEach(function(service){
-            let ServiceDiv = document.createElement("div");
-            ServiceDiv.classList.add("m-3", "d-block", "text-center");
-
-            let serviceInfo = document.createElement("p");
-            serviceInfo.classList.add("text-lg-center");
-            serviceInfo.innerHTML = service.description;
-            ServiceDiv.appendChild(serviceInfo);
-
-            ServicesDiv.appendChild(ServiceDiv);
-        });
-
-        container.appendChild(ServicesDiv);
-
-        document.body.appendChild(container);
-    }
 
     // Displaying about page
     function DisplayAboutPage() {
         console.log("Display About page called");
-        CreateAboutUsPage();
+
     }
 
     // Validations for register page
@@ -132,7 +76,7 @@
 
             if (subscribeCheckbox.checked) {
                 AddContact(fullName.value,contactNumber.value,emailAddress.value);
-                 location.href="contact-list.html";
+                 location.href="contact-list";
             }
 
         });
@@ -190,16 +134,16 @@
                 if (confirm("Delete contact ,are you sure?")) {
                     localStorage.removeItem($(this).val());
                 }
-                location.href = "contact-list.html";
+                location.href = "contact-list";
             });
             $("button.edit").on("click", function () {
-                location.href = "edit.html#" + $(this).val();
+                location.href = "edit#" + $(this).val();
             });
 
         $("#addButton").on("click", (event) => {
             event.preventDefault();
             console.log("add c");
-            location.href = "edit.html#add";
+            location.href = "edit#add";
 
         });
 
@@ -239,144 +183,8 @@
         });
     }
 
-    // Creating about page
-    function CreateAboutUsPage() {
-        let container = document.createElement("div");
-        container.classList.add("container", "justify-content-center", "ms-auto");
 
-        let h1 = document.createElement("h1");
-        h1.textContent = "About Us";
-        container.appendChild(h1);
 
-        let h2 = document.createElement("h2");
-        h2.classList.add("text-center");
-        h2.textContent = "Team Members";
-        container.appendChild(h2);
-
-        let teamDiv = document.createElement("div");
-        teamDiv.id = "team";
-        teamDiv.classList.add("justify-content-center", "d-flex");
-
-        let teamMembers = [
-            {
-                name: "Sanya Singhal",
-                email: "sanya.singhal@dcmail.ca",
-                phone: "437-286-1739",
-                image: "./dp/dp_sanya.jpeg"
-            },
-            {
-                name: "Prerakkumar Patel",
-                email: "prerakkumar.patel@dcmail.ca",
-                phone: "905-922-8135",
-                image: "./dp/dp_prerak.jpeg"
-            },
-            {
-                name: "Zeel Sutariya",
-                email: "zeel.sutariya@dcmail.ca",
-                phone: "905-922-8577",
-                image: "./dp/dp_zeel.jpeg"
-            }
-        ];
-
-        teamMembers.forEach(function(member) {
-            let memberDiv = document.createElement("div");
-            memberDiv.classList.add("m-3", "d-inline-block");
-
-            let memberImg = document.createElement("img");
-            memberImg.src = member.image;
-            memberImg.width = "304";
-            memberImg.height = "228";
-            memberImg.alt = member.name + "'s DP";
-            memberDiv.appendChild(memberImg);
-
-            let memberInfo = document.createElement("p");
-            memberInfo.classList.add("text-lg-center");
-            memberInfo.innerHTML = member.name + "<br/>" + member.email + "<br/>" + member.phone;
-            memberDiv.appendChild(memberInfo);
-
-            teamDiv.appendChild(memberDiv);
-        });
-
-        container.appendChild(teamDiv);
-
-        document.body.appendChild(container);
-    }
-
-    // Displaying bottom navigation var
-    function DisplaynavbarBottom(){
-        let currentDate = new Date();
-        let year = currentDate.getFullYear();
-        let navbar = document.createElement("nav");
-        navbar.setAttribute("class", "navbar justify-content-center fixed-bottom navbar-light bg-light");
-        let copyright = document.createElement("div");
-        copyright.setAttribute("class", "navbar-text ");
-        copyright.innerHTML = "3Dev &copy; " +year;
-        navbar.appendChild(copyright);
-        document.body.appendChild(navbar);
-    }
-
-    // Creating project page
-    function CreateProjectPage() {
-        let container = document.createElement("div");
-        container.classList.add("container", "justify-content-center", "ms-auto");
-
-        let h1 = document.createElement("h1");
-        h1.textContent = "Project";
-        container.appendChild(h1);
-
-        let h2 = document.createElement("h2");
-        h2.classList.add("text-center");
-        h2.textContent = "Top project that are adding values in tech world";
-        container.appendChild(h2);
-        //
-        let projectDiv = document.createElement("div");
-        projectDiv.id = "project";
-        projectDiv.classList.add("justify-content-center", "d-flex");
-
-        let projects = [
-            {
-                name: "ASP Payrolletor",
-                email: "sanya.singhal@dcmail.ca",
-                phone: "437-286-1739",
-                image: "./projectsphoto/paycalculator.jpeg"
-            },
-            {
-                name: "Prerakkumar Patel",
-                email: "prerakkumar.patel@dcmail.ca",
-                phone: "905-922-8135",
-                image: "./projectsphoto/pizzashop.jpeg"
-            },
-            {
-                name: "Zeel Sutariya",
-                email: "zeel.sutariya@dcmail.ca",
-                phone: "905-922-8577",
-                image: "./projectsphoto/salescompany.jpeg"
-            }
-        ];
-
-        projects.forEach(function(project) {
-            let projectDetailsDiv = document.createElement("div");
-            projectDetailsDiv.classList.add("m-3", "d-inline-block");
-
-            let projectImg = document.createElement("img");
-            projectImg.src = project.image;
-            projectImg.width = "304";
-            projectImg.height = "228";
-            projectImg.alt = project.name + "'s DP";
-            projectDetailsDiv.appendChild(projectImg);
-
-            let projectInfo = document.createElement("p");
-            projectInfo.classList.add("text-lg-center");
-            projectInfo.innerHTML = project.name + "<br/>" + project.email + "<br/>" + project.phone;
-            projectDetailsDiv.appendChild(projectInfo);
-
-            projectDiv.appendChild(projectDetailsDiv);
-        });
-
-        container.appendChild(projectDiv);
-
-        document.body.appendChild(container);
-    }
 
     // Displaying edit page
     function DisplayEditPage(){
@@ -391,10 +199,10 @@
                 $("#editButton").on("click",(event)=>{
                     event.preventDefault()
                     AddContact(fullName.value,contactNumber.value,emailAddress.value);
-                    location.href="contact-list.html";
+                    location.href="contact-list";
                 });
                 $("#cancelButton").on("click",()=>{
-                    location.href="contact-list.html";
+                    location.href="contact-list";
                 });
                 break;
             default:{
@@ -411,10 +219,10 @@
                     contact.ContactNumber= $("#contactNumber").val();
                     contact.EmailAddress= $("#emailAddress").val();
                     localStorage.setItem(page,contact.serialize());
-                    location.href ="contact-list.html";
+                    location.href ="contact-list";
                 });
                 $("#cancelButton").on("click",()=>{
-                    location.href="contact-list.html";
+                    location.href="contact-list";
                 });
             }
             break;
@@ -446,7 +254,7 @@
                    sessionStorage.setItem("user",newUser.serialize());
                    messageArea.removeAttr("class").hide();
 
-                   location.href="contact-list.html";
+                   location.href="contact-list";
 
 
                }else {
@@ -458,7 +266,7 @@
         });
         $("#cancelButton").on("click",function (){
             document.forms[0].reset();
-            location.href ="index.html";
+            location.href ="/";
         });
 
 
@@ -474,7 +282,7 @@
             let linkItem = $("<li>").addClass("nav-item");
             let user = sessionStorage.getItem("user").split(" ")[0];
             console.log(user);
-            let a = $("<a>").addClass("nav-link").text(user);
+            let a = $("<a>").addClass("nav-link border border-danger border-2 rounded ").text(user);
 
             $("ul li:last-child").before(linkItem.add(a));
 
@@ -482,7 +290,7 @@
         $("#logout").on("click",function () {
             console.log("logout clicked");
             sessionStorage.clear();
-            // location.href = "index.html";
+            location.href = "/";
 
         });
     }
@@ -506,52 +314,66 @@
 
         //
     }
+    function  ActiveLinkCallback(){
+        switch (router.ActiveLink)
+        {
+            case "home":return DisplayHomePage;
+            case "about":return DisplayAboutPage;
+            case "services":return DisplayServicePage;
+            case "contact":return  DisplayContactPage;
+            case "contact-list":return  DisplayContactListPage;
+            case "edit":return DisplayEditPage;
+            case "projects":return  DisplayProjectPage;
+            case "register":return  DisplayRegisterPage;
+            case "login":return  DisplayLoginPage;
+            case "404":return  Display404;
+            default:
+                console.error("Error: callback does not "+ router.ActiveLink);
+                break;
 
+        }
+    }
+    function Display404()
+    {
+        
+    }
+    function LoadContent(){
+        let pageName = router.ActiveLink;
+        let pageTitle = pageName.charAt(0).toUpperCase() + pageName.slice(1);
+     let callback =  ActiveLinkCallback();
+        $.get(`./views/components/${pageName}.html`,function (html_data){
+
+            $("main").html(html_data);
+            callback();
+
+        });
+
+        $("title").text(pageTitle);
+
+        console.log(`load content called for ${pageName}`);
+
+
+    }
+    function LoadFooter(){
+        $.get("./views/components/footer.html",function (html_data){
+
+            $("footer").html(html_data);
+            console.log("load footer called");
+        });
+
+    }
     // Start Function
     function Start() {
 
         console.log("app started");
-        AjaxRequest("GET","header.html",LoadHeader);
 
-
-        switch (document.title) {
-            case "Home":
-                DisplayHomePage();
-                break;
-            case "Products":
-                DisplayProductPage();
-                break;
-            case "About":
-                DisplayAboutPage();
-                break;
-            case "Services":
-                DisplayServicePage();
-                break;
-            case "Contact":
-                DisplayContactPage();
-                break;
-            case "ContactList":
-                DisplayContactListPage();
-                 break;
-            case "EditContact":
-                DisplayEditPage();
-                break;
-            case "Register":
-                DisplayRegisterPage();
-                break;
-            case "Login":
-                DisplayLoginPage();
-                break;
-            default :{
-                console.log("Not registered");
-            }
-        }
-
+        LoadHeader();
+        LoadFooter();
+            LoadContent();
 
     }
 
     window.addEventListener("load", Start);
 
-    window.addEventListener("load", DisplaynavbarBottom);
 
 })()
