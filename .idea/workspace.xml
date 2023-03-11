@@ -4,51 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94a5c818-3e88-4629-91a3-f31df4e785f0" name="Changes" comment="Assignment 2 With Documentation bug1 fixed">
-      <change afterPath="$PROJECT_DIR$/../ICE3 (2).zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ICE3/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/404.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/components/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/components/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/components/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/components/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/components/projects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/components/services.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ICE3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ICE3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ICE3/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ICE3/scripts/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ICE3/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ICE3/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/components/contact-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/components/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/components/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/components/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/components/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/JQuery.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/JQueryStatic.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/dist/jquery.slim.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/legacy.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/misc.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/jquery/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/sizzle/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/sizzle/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/sizzle/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/sizzle/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/components/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/authguard.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/authguard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="94a5c818-3e88-4629-91a3-f31df4e785f0" name="Changes" comment="ICE4 functional" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +61,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/prera/OneDrive/Last and We done (Durham Semester 4)/WebDev Client Side/WebstormProjects/WebD6201",
+    "last_opened_file_path": "C:/Users/prera/OneDrive/Last and We done (Durham Semester 4)/WebDev Client Side/WebstormProjects/prerakkumarpatel.github.io",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -150,6 +106,7 @@
       <workItem from="1678145575486" duration="666000" />
       <workItem from="1678236065442" duration="3509000" />
       <workItem from="1678313631709" duration="483000" />
+      <workItem from="1678387194679" duration="521000" />
     </task>
     <task id="LOCAL-00001" summary="ICE3 completed">
       <created>1676688087263</created>
@@ -228,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677288452948</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ICE4 functional">
+      <created>1678387680060</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678387680060</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +297,7 @@
     <MESSAGE value="Assignment 2 - No Docmentation but Fuctional v2" />
     <MESSAGE value="Assignment 2 With Documentation" />
     <MESSAGE value="Assignment 2 With Documentation bug1 fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 2 With Documentation bug1 fixed" />
+    <MESSAGE value="ICE4 functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="ICE4 functional" />
   </component>
 </project>
